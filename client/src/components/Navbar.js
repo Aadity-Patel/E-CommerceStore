@@ -1,10 +1,15 @@
 import React from 'react'
-import { Navbar as NavbarBs } from 'react-bootstrap'
+import { Container, Nav, Navbar as NavbarBs } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <div>
-      <h1>Hi</h1>
-    </div>
+    <NavbarBs className = "bg-white shadow-sm mb-3">
+        <Container>
+            <Nav.Link to = "/" as = {NavLink}>
+                Home
+            </Nav.Link>
+        </Container>
+    </NavbarBs>
   )
 }
