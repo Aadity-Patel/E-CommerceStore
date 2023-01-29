@@ -1,10 +1,18 @@
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      'Hello World!!!'
-    </div>
+    <>
+      <Navbar />
+      <Container>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Container>
+    </>
   );
 }
 
